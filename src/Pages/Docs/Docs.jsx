@@ -94,22 +94,29 @@ export default function Docs() {
 
         {/* Navigation Buttons */}
         <Box style={{ marginTop: '40px', display: 'flex', justifyContent: 'space-between' }}>
-          <Link
-            variant="contained"
-            style={{ backgroundColor: '#333', color: 'white' }}
-            to="/"
-          >
-            Back
-          </Link>
-          <Link
-            variant="contained"
-            style={{ backgroundColor: '#555', color: 'white' }}
-           to="/docs2"
-          >
-            Next
-          </Link>
+          <Box style={{ marginTop: '40px', textAlign: 'center' }}>
+             <Link
+                 to="/"
+                 style={{ textDecoration: 'none' }}
+               >
+                 <Button variant="contained" style={{ backgroundColor: '#555', color: 'white' }}>
+                   Home
+                 </Button>
+               </Link>
+             </Box>
+            <Box style={{ marginTop: '40px', textAlign: 'center' }}>
+               <Link
+                   to="/docs2"
+                   style={{ textDecoration: 'none' }}
+                 >
+                   <Button variant="contained" style={{ backgroundColor: '#555', color: 'white' }}>
+                     Next
+                   </Button>
+                 </Link>
+               </Box>
         </Box>
       </Container>
+      <br/>
     </Paper>
   );
 }

@@ -12,7 +12,7 @@ export default function Home() {
         </Typography>
 
         <Typography variant="h4" style={{ marginTop: '20px' }}>
-          The Lazy Package For Lazy Developers
+          The Smart Package For Smart Developers
         </Typography>
 
         {/* Introduction Section */}
@@ -84,30 +84,18 @@ export default function Home() {
 
         {/* Links */}
         <Box style={{ marginTop: '30px' }}>
-          <Link
-            to="https://github.com/ManojGowda89/mbfi.git"
-            color="inherit"
-            underline="hover"
-            style={{ marginRight: '20px', fontWeight: 'bold' }}
-          >
-            GitHub
-          </Link>
-          <Link
+         
+          <Box style={{ marginTop: '40px', textAlign: 'center' }}>
+        <Link
             to="/docs"
-            color="inherit"
-            underline="hover"
-            style={{ marginRight: '20px', fontWeight: 'bold' }}
+            style={{ textDecoration: 'none' }}
           >
-            Docs
+            <Button variant="contained" style={{ backgroundColor: '#555', color: 'white' }}>
+              Docs
+            </Button>
           </Link>
-          <Link
-            to="https://www.npmjs.com/package/mbfi"
-            color="inherit"
-            underline="hover"
-            style={{ fontWeight: 'bold' }}
-          >
-            NPM
-          </Link>
+        </Box>
+      
         </Box>
 
       

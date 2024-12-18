@@ -112,24 +112,31 @@ export default function Docs4() {
             />
           </Card>
         </Box>
-
-        {/* Navigation Buttons */}
+ {/* Navigation Buttons */}
         <Box style={{ marginTop: '40px', display: 'flex', justifyContent: 'space-between' }}>
-          <Link
-            variant="contained"
-            style={{ backgroundColor: '#333', color: 'white' }}
-            to='/docs3'
-          >
-            Back
-          </Link>
-          <Link
-            variant="contained"
-            style={{ backgroundColor: '#555', color: 'white' }}
-          >
-            Next
-          </Link>
+             <Box style={{ marginTop: '40px', textAlign: 'center' }}>
+                <Link
+                    to="/docs3"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <Button variant="contained" style={{ backgroundColor: '#555', color: 'white' }}>
+                      Back
+                    </Button>
+                  </Link>
+                </Box>
+             <Box style={{ marginTop: '40px', textAlign: 'center' }}>
+                <Link
+                    to="/docs5"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <Button variant="contained" style={{ backgroundColor: '#555', color: 'white' }}>
+                      Next
+                    </Button>
+                  </Link>
+                </Box>
         </Box>
       </Container>
+      <br/>
     </Paper>
   );
 }

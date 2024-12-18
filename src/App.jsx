@@ -19,9 +19,7 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Navbar/>
       <RouterProvider router={router} />
-      <Footer/>
     </Suspense>
   );
 }

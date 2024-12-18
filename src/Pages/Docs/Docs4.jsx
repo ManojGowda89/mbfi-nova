@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Container, Paper, Box, Button, Card, CardMedia, CardContent } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Docs4() {
   const navigate = useNavigate();
@@ -115,19 +115,19 @@ export default function Docs4() {
 
         {/* Navigation Buttons */}
         <Box style={{ marginTop: '40px', display: 'flex', justifyContent: 'space-between' }}>
-          <Button
+          <Link
             variant="contained"
             style={{ backgroundColor: '#333', color: 'white' }}
-            onClick={() => navigate('/docs3')}
+            to='/docs3'
           >
             Back
-          </Button>
-          <Button
+          </Link>
+          <Link
             variant="contained"
             style={{ backgroundColor: '#555', color: 'white' }}
           >
             Next
-          </Button>
+          </Link>
         </Box>
       </Container>
     </Paper>

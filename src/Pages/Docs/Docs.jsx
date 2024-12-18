@@ -1,9 +1,8 @@
 import React from 'react';
 import { Typography, Container, Paper, Box, Button, List, ListItem, ListItemText, Card, CardMedia, CardContent } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Docs() {
-  const navigate = useNavigate();
 
   return (
     <Paper style={{ backgroundColor: '#121212', color: 'white', minHeight: '100vh' }}>
@@ -95,20 +94,20 @@ export default function Docs() {
 
         {/* Navigation Buttons */}
         <Box style={{ marginTop: '40px', display: 'flex', justifyContent: 'space-between' }}>
-          <Button
+          <Link
             variant="contained"
             style={{ backgroundColor: '#333', color: 'white' }}
-            onClick={() => navigate('/')}
+            to="/"
           >
             Back
-          </Button>
-          <Button
+          </Link>
+          <Link
             variant="contained"
             style={{ backgroundColor: '#555', color: 'white' }}
-            onClick={() => navigate('/docs2')}
+           to="/docs2"
           >
             Next
-          </Button>
+          </Link>
         </Box>
       </Container>
     </Paper>

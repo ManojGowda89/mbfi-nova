@@ -9,7 +9,7 @@ export default function Footer() {
         color: '#fff',
         padding: '15px 0',
         textAlign: 'center',
-        marginTop: '3px',
+        marginTop: '0px',
       }}
     >
       <Typography variant="body2">© 2024 mbfi - Powered by mb64</Typography>

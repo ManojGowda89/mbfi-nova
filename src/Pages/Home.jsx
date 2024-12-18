@@ -1,5 +1,6 @@
 import React from 'react';
-import { Typography, Container, Link, Paper, Box, Divider, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { Typography, Container, Paper, Box, Divider, Button } from '@mui/material';
 
 export default function Home() {
   return (
@@ -84,7 +85,7 @@ export default function Home() {
         {/* Links */}
         <Box style={{ marginTop: '30px' }}>
           <Link
-            href="https://github.com/ManojGowda89/mbfi.git"
+            to="https://github.com/ManojGowda89/mbfi.git"
             color="inherit"
             underline="hover"
             style={{ marginRight: '20px', fontWeight: 'bold' }}
@@ -92,7 +93,7 @@ export default function Home() {
             GitHub
           </Link>
           <Link
-            href="/docs"
+            to="/docs"
             color="inherit"
             underline="hover"
             style={{ marginRight: '20px', fontWeight: 'bold' }}
@@ -100,7 +101,7 @@ export default function Home() {
             Docs
           </Link>
           <Link
-            href="https://www.npmjs.com/package/mbfi"
+            to="https://www.npmjs.com/package/mbfi"
             color="inherit"
             underline="hover"
             style={{ fontWeight: 'bold' }}

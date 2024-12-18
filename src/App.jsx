@@ -1,49 +1,27 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./Pages/Home";
-import Docs from "./Pages/Docs/Docs";
-import { Paper } from '@mui/material';
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Docs2 from "./Pages/Docs/Docs2";
-import Docs3 from "./Pages/Docs/Docs3";
-import Docs4 from "./Pages/Docs/Docs4";
-export default function App() {
+import Navbar  from "./components/Navbar"
+import Footer from "./components/Footer"
+const Home = lazy(() => import("./Pages/Home"));
+const Docs = lazy(() => import("./Pages/Docs/Docs"));
+const Docs2 = lazy(() => import("./Pages/Docs/Docs2"));
+const Docs3 = lazy(() => import("./Pages/Docs/Docs3"));
+const Docs4 = lazy(() => import("./Pages/Docs/Docs4"));
 
 const router = createBrowserRouter([
-{
-  path:"/",
-  element:<Home/>
-},
-{
-  path:"/docs",
-  element:<Docs/>
-},
-{
-  path:"/docs2",
-  element:<Docs2/>
-},
-{
-path:"/docs3",
-element:<Docs3/>
-},
-{
-  path:"/docs4",
-  element:<Docs4/>
-  },
+  { path: "/", element: <Home /> },
+  { path: "/docs", element: <Docs /> },
+  { path: "/docs2", element: <Docs2 /> },
+  { path: "/docs3", element: <Docs3 /> },
+  { path: "/docs4", element: <Docs4 /> },
+]);
 
-
-
-
-
-])
-
-
-  
+export default function App() {
   return (
-    <Paper style={{ backgroundColor: '#121212', minHeight: '100vh' }}>
+    <Suspense fallback={<div>Loading...</div>}>
       <Navbar/>
-   <RouterProvider router={router} />
-   <Footer/>
-   </Paper>
+      <RouterProvider router={router} />
+      <Footer/>
+    </Suspense>
   );
 }
